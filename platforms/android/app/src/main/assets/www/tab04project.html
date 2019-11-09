@@ -2,93 +2,365 @@
 <HTML>
 
 <HEAD>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <!-- A biblioteca bundle já contem os arquivos JS do Bootstrap, Popper, e jQuery.
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- A biblioteca bundle já contem os arquivos JS do Bootstrap, Popper, e jQuery.
     <script src="js/bootstrap.bundle.js"></script>-->
-    <title>FTT EC LP2 N1!!</title>
-    <LINK REL="stylesheet" HREF="css/bootstrap.css" />
-    <STYLE>
-        .center-txt {
-            text-align: center;
-            color: black;
-            width: 90px;
-            padding: 4px;
-            margin:0;
-            border:0;
-        }
-        .button-selected {
-            background-color: #343a40;
-            color: white;
-            border-radius: 15px;
-        }       
-        .width-button-bar {
-            text-align: center;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            margin-right: 0;
-            margin-left: 0;
-            
-        }
-        .bottom-button-bar {
-            margin:0;
-            padding:0;
-            border:0;
-            width: 100%;
-        }
-        .icon-font {
-            font-size: 40px;   
-        }
-        main {
-            padding-top: 56px;
-            padding-bottom: 50px;
-        }
-    </STYLE>
-    <SCRIPT>
-
-
-
-    </SCRIPT>
+	<title>FTT EC LP2 N1!!</title>
+	<link href="./css/all.css" rel="stylesheet">
+	<LINK REL="stylesheet" HREF="css/bootstrap.css" />
+	<LINK REL="stylesheet" HREF="css/bootstrap.min.css" />
+	<LINK REL="stylesheet" HREF="css/main.css" />
 </HEAD>
 
 <BODY lang="pt-br">
+	<a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle">
+		<i class="fa fa-list"></i>
+	</a>
+	<div id="sidebar-wrapper">
+		<ul class="sidebar-nav">
+			<a id="menu-close" href="#" class="btn btn-default pull-right toggle">
+				<i class="fa fa-times-circle"></i>
+			</a>
+			<li class="sidebar-brand">
+				<a href="#">FTT EC LP2 N1!!!</a>
+			</li>
+			<li>
+				<a href="tab01news.html" style="color: white;"><i class="fa fa-newspaper"></i> News</a>
+			</li>
+			<li>
+				<a href="tab02map.html" style="color: white;"><i class="fa fa-map"></i> Map</a>
+			</li>
+			<li>
+				<a href="tab03todo.html" style="color: white;"><i class="fa fa-list"></i> Todo</a>
+			</li>
+			<li>
+				<a href="tab04project.html" style="color: white;"><i class="fa fa-address-card"></i> Super-Trunfo</a>
+			</li>
+		</ul>
+	</div>
+	<main class="container text-center" id="aluno">
+		<div class="divLoading"></div>
+		<img src="img/LogoMarvel.png" style="width: 15%">
+		<hr />
+		<div class="preJogo">
+			<div class="row" style="padding:10% 0% 0% 0%; margin-left: 20%;">
+				<div class="col-md-3">
+					<span>Digite a quantidade de cartas: </span>
+				</div>
+				<div class="col-md-3">
+					<input type="number" class="form-control" id="txtQtdCartas" />
+				</div>
+				<div class="col-md-2">
+					<button class="btn btn-success" id="btnIniciar"> <span class="fa fa-play"></span> Play</button>
+				</div>
+			</div>
+		</div>
+		<div class="loading" style="display:none;">
+		</div>
+		<div class="tabCards" style="display: none">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="card">
+						<span id="nomePerc1" style="font-size: 19px"></span>
+						<div class="text-center">
+							<img id="imgPerc1" src="" class="imgCard" />
+						</div>
+						<div class="text-left cardAttr">
+							<a href="#" id="btnIntel">
+								<div class="row atributosLinha">
+									<div class="col-md-8">
+										<i class="fa fa-brain"> </i> Inteligencia:
+									</div>
+									<div class="col-md-4">
+										<span id="intel1">
+										</span>
+									</div>
+								</div>
+							</a>
+							<a href="#" id="btnForc">
+								<div class="row atributosLinha">
+									<div class="col-md-8">
+										<i class="fa fa-dumbbell"></i>Força
+									</div>
+									<div class="col-md-4">
+										<span id="forc1"></span>
+									</div>
+								</div>
+							</a>
+							<a href="#" id="btnVelo">
+								<div class="row atributosLinha">
+									<div class="col-md-8">
+										<i class="fa fa-tachometer-alt"></i>Velocidade
+									</div>
+									<div class="col-md-4">
+										<span id="velo1"></span>
+									</div>
+								</div>
+							</a>
+							<a href="#" id="btnDura">
+								<div class="row atributosLinha">
+									<div class="col-md-8">
+										<i class="fa fa-shield-alt"></i>Durabilidade
+									</div>
+									<div class="col-md-4">
+										<span id="durab1"></span>
+									</div>
+								</div>
+							</a>
+							<a href="#" id="btnPoder">
+								<div class="row atributosLinha">
+									<div class="col-md-8">
+										<i class="fa fa-bolt"></i>Poder
+									</div>
+									<div class="col-md-4">
+										<span id="poder1"></span>
+									</div>
+								</div>
+							</a>
+							<a href="#" id="btnCombat">
+								<div class="row atributosLinha">
+									<div class="col-md-8">
+										<i class="fa fa-khanda"></i>Combate
+									</div>
+									<div class="col-md-4">
+										<span id="combat1"></span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2" style="margin: auto;">
+					<span id="placar1"></span>
+					<span class="fa fa-times" style="font-size: 20px;"></span>
+					<span id="placar2"></span>
+				</div>
+				<div class="col-md-5">
+					<div class="card">
+						<span id="nomePerc2" style="font-size: 19px"></span>
+						<div class="text-center">
+							<img id="imgPerc2" src="" class="imgCard" />
+						</div>
+						<div class="text-left cardAttr">
+							<div class="row atributosLinha">
+								<div class="col-md-8">
+									<i class="fa fa-brain"> </i> Inteligencia:
+								</div>
+								<div class="col-md-4">
+									<span id="intel2">
+									</span>
+								</div>
+							</div>
+							<div class="row atributosLinha">
+								<div class="col-md-8">
+									<i class="fa fa-dumbbell"></i>Força
+								</div>
+								<div class="col-md-4">
+									<span id="forc2"></span>
+								</div>
+							</div>
+							<div class="row atributosLinha">
+								<div class="col-md-8">
+									<i class="fa fa-tachometer-alt"></i>Velocidade
+								</div>
+								<div class="col-md-4">
+									<span id="velo2"></span>
+								</div>
+							</div>
+							<div class="row atributosLinha">
+								<div class="col-md-8">
+									<i class="fa fa-shield-alt"></i>Durabilidade
+								</div>
+								<div class="col-md-4">
+									<span id="durab2"></span>
+								</div>
+							</div>
+							<div class="row atributosLinha">
+								<div class="col-md-8">
+									<i class="fa fa-bolt"></i>Poder
+								</div>
+								<div class="col-md-4">
+									<span id="poder2"></span>
+								</div>
+							</div>
+							<div class="row atributosLinha">
+								<div class="col-md-8">
+									<i class="fa fa-khanda"></i>Combate
+								</div>
+								<div class="col-md-4">
+									<span id="combat2"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
+	<script src="./js/bootbox.all.min.js"></script>
+	<script>
+		window.screen.orientation.lock('landscape');
+		var IDs = [];
+		var Play1 = [];
+		var Play2 = [];
+		var Atual1;
+		var Atual2;
+		$("#btnIniciar").click(function () {
+			var qtd = $("#txtQtdCartas").val();
+			if (qtd % 2 == 0) {
+				if (qtd >= 6 && qtd <= 731) {
+					selecionarIDs(qtd);
+					$(".preJogo").css("display", "none");
+					$(".tabCards").css("display", "block");
+					proxCartas();
+				}
+				else {
+					bootbox.alert("O número de cartas deve ser maior ou igual a 6, e menor ou igual a 731!!");
+					return;
+				}
+			}
+			else {
+				bootbox.alert("O número deve ser pá!!");
+				return;
+			}
+		});
+		async function proxCartas() {
+			$("#placar1").html(Play1.length);
+			$("#placar2").html(Play2.length);
+			if (Play1.length == 0)
+				bootbox.alert("Perdeu o Jogo!!", function () {
+					location.reload();
+				});
+			else if (Play2.length == 0)
+				bootbox.alert("Ganhou o Jogo!!", function () {
+					location.reload();
+				});
+			var ale = Math.floor(Math.random() * (Play1.length - 1))
+			var id = Play1[ale];
+			var hero = await GetHero(id);
+			$("#imgPerc1").attr("src", hero.image.url);
+			$("#nomePerc1").html(hero.name);
+			hero.powerstats.intelligence = hero.powerstats.intelligence == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.intelligence;
+			hero.powerstats.strength = hero.powerstats.strength == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.strength;
+			hero.powerstats.speed = hero.powerstats.speed == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.speed;
+			hero.powerstats.durability = hero.powerstats.durability == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.durability;
+			hero.powerstats.power = hero.powerstats.power == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.power;
+			hero.powerstats.combat = hero.powerstats.combat == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.combat;
+			$("#intel1").html(hero.powerstats.intelligence);
+			$("#forc1").html(hero.powerstats.strength);
+			$("#velo1").html(hero.powerstats.speed);
+			$("#durab1").html(hero.powerstats.durability);
+			$("#poder1").html(hero.powerstats.power);
+			$("#combat1").html(hero.powerstats.combat);
+			Atual1 = hero;
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+			ale = Math.floor(Math.random() * (Play2.length - 1))
+			id = Play2[ale];
+			hero = await GetHero(id);
+			$("#imgPerc2").attr("src", hero.image.url);
+			$("#nomePerc2").html(hero.name);
+			hero.powerstats.intelligence = hero.powerstats.intelligence == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.intelligence;
+			hero.powerstats.strength = hero.powerstats.strength == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.strength;
+			hero.powerstats.speed = hero.powerstats.speed == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.speed;
+			hero.powerstats.durability = hero.powerstats.durability == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.durability;
+			hero.powerstats.power = hero.powerstats.power == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.power;
+			hero.powerstats.combat = hero.powerstats.combat == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.combat;
+			$("#intel2").html("??");
+			$("#forc2").html("??");
+			$("#velo2").html("??");
+			$("#durab2").html("??");
+			$("#poder2").html("??");
+			$("#combat2").html("??");
+			Atual2 = hero;
+		}
+		function selecionarIDs(qtd) {
+			IDs = [];
+			var id = 0;
+			for (var i = 0; i < qtd; i++) {
+				do {
+					id = Math.floor(Math.random() * 731);
+				} while (IDs.includes(id));
+				IDs.push(id);
+			}
+			var metade = qtd / 2;
+			Play1 = IDs.slice(0, metade);
+			Play2 = IDs.slice(metade, qtd);
+			return IDs;
+		}
+		async function GetHero(id) {
+			loading(true);
+			var url = "https://superheroapi.com/api.php/2390606624380676/" + id
+			return await fetch(url).then(function (response) {
+				return response.json();
+			}).finally(function () {
+				loading(false);
+			});
+		}
+		function loading(load) {
+			if (load)
+				$('.divLoading').show();
+			else
+				$('.divLoading').hide();
+		}
+		$("#btnIntel").click(function () {
+			ValidarResultado(Atual1.powerstats.intelligence, Atual2.powerstats.intelligence);
+		});
+		$("#btnForc").click(function () {
+			ValidarResultado(Atual1.powerstats.strength, Atual2.powerstats.strength);
+		});
+		$("#btnVelo").click(function () {
+			ValidarResultado(Atual1.powerstats.speed, Atual2.powerstats.speed);
+		});
+		$("#btnDura").click(function () {
+			ValidarResultado(Atual1.powerstats.durability, Atual2.powerstats.durability);
+		});
+		$("#btnPoder").click(function () {
+			ValidarResultado(Atual1.powerstats.power, Atual2.powerstats.power);
+		});
+		$("#btnCombat").click(function () {
+			ValidarResultado(Atual1.powerstats.combat, Atual2.powerstats.combat);
+		});
+		function ValidarResultado(valor1, valor2) {
+			revelar(Atual2);
+			var val1 = parseInt(valor1);
+			var val2 = parseInt(valor2);
 
-        <a class="navbar-brand" href="#">&#x1F981; FTT EC LP2 N1!!!</a>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <div class="navbar-nav float-right text-right pr-3">
-                <a class="nav-item nav-link" href="index.html">Splash</a>
-                <a class="nav-item nav-link" href="http://www.fundacaosalvadorarena.org.br/" target="newpage">CEFSA</a>
-                <a class="nav-item nav-link" href="about.html">Sobre</a>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container" id="aluno">
-        <hr>
-        <h1><span class="badge badge-success">Projeto do aluno!!</span></h1>
-    </main>
-
-    <nav class="navbar fixed-bottom navbar-light bg-light width-button-bar">
-        <div class="row w-100 bottom-button-bar">
-            <div class="col-sm center-txt"><b onclick='window.location="tab01news.html"'>News<br><span class="icon-font">&#x1f4f0;</span></b>
-            </div>
-            <div class="col-sm center-txt"><b onclick='window.location="tab02map.html"'>Map<br><span class="icon-font">&#x1f4cc;</span></b>
-            </div>
-            <div class="col-sm center-txt"><b onclick='window.location="tab03todo.html"'>Todo<br><span class="icon-font">&#x1F4DD;</span></b>
-            </div>
-            <div class="col-sm center-txt button-selected"><b onclick='window.location="tab04project.html"'>???<br><span class="icon-font">&#x1F981;</span></b>
-            </div>
-        </div>
-    </nav>
+			if (val1 >= val2) {
+				Play1.push(parseInt(Atual2.id));
+				Play2.splice(Play2.indexOf(parseInt(Atual2.id)), 1);
+				bootbox.alert("Ganhou a rodada!!", function () {
+					proxCartas();
+				});
+			}
+			else {
+				Play2.push(parseInt(Atual1.id));
+				Play1.splice(Play1.indexOf(parseInt(Atual1.id)), 1);
+				bootbox.alert("Perdeu a rodada!!", function () {
+					proxCartas();
+				});
+			}
+		}
+		function revelar(hero) {
+			$("#intel2").html(hero.powerstats.intelligence == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.intelligence);
+			$("#forc2").html(hero.powerstats.strength == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.strength);
+			$("#velo2").html(hero.powerstats.speed == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.speed);
+			$("#durab2").html(hero.powerstats.durability == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.durability);
+			$("#poder2").html(hero.powerstats.power == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.power);
+			$("#combat2").html(hero.powerstats.combat == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.combat);
+		}
+		$("#menu-close").click(function (e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+		});
+		$("#menu-toggle").click(function (e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+		});
+	</script>
 </BODY>
-<!-- carga de scripts do Bootstrap, JQuery, Popper -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
 </HTML>

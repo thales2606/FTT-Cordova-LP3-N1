@@ -8,101 +8,36 @@
 	<title>FTT EC LP2 N1!!</title>
 	<link href="./css/all.css" rel="stylesheet">
 	<LINK REL="stylesheet" HREF="css/bootstrap.css" />
-	<STYLE>
-		.center-txt {
-			text-align: center;
-			color: black;
-			width: 90px;
-			padding: 4px;
-			margin: 0;
-			border: 0;
-		}
-
-		.button-selected {
-			background-color: #343a40;
-			color: white;
-			border-radius: 15px;
-		}
-
-		.width-button-bar {
-			text-align: center;
-			padding-top: 5px;
-			padding-bottom: 5px;
-			margin-right: 0;
-			margin-left: 0;
-
-		}
-
-		.bottom-button-bar {
-			margin: 0;
-			padding: 0;
-			border: 0;
-			width: 100%;
-		}
-
-		.icon-font {
-			font-size: 40px;
-		}
-
-		main {
-			padding-top: 56px;
-			padding-bottom: 50px;
-		}
-
-		.card {
-			background: linear-gradient(45deg, #f90101, #5f0202c7);
-			width: 80%;
-			margin: auto;
-		}
-
-		.imgCard {
-			max-width: 50%;
-			max-height: 50%;
-		}
-
-		.cardAttr {
-			margin: 0% 10%;
-		}
-
-		.atributosLinha {
-			border: 1px solid #f50909;
-			border-radius: 30px;
-			font-size: 15px;
-			color: white;
-		}
-
-		.divLoading {
-			background: url(img/loader.gif) no-repeat center center #403c3c85;
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			z-index: 9999999;
-			display: none;
-		}
-	</STYLE>
+	<LINK REL="stylesheet" HREF="css/bootstrap.min.css" />
+	<LINK REL="stylesheet" HREF="css/main.css" />
 </HEAD>
 
 <BODY lang="pt-br">
-
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-			aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<a class="navbar-brand" href="#">&#x1F981; FTT EC LP2 N1!!!</a>
-
-		<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-			<div class="navbar-nav float-right text-right pr-3">
-				<a class="nav-item nav-link" href="index.html">Splash</a>
-				<a class="nav-item nav-link" href="http://www.fundacaosalvadorarena.org.br/" target="newpage">CEFSA</a>
-				<a class="nav-item nav-link" href="about.html">Sobre</a>
-			</div>
-		</div>
-	</nav>
-
+	<a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle">
+		<i class="fa fa-list"></i>
+	</a>
+	<div id="sidebar-wrapper">
+		<ul class="sidebar-nav">
+			<a id="menu-close" href="#" class="btn btn-default pull-right toggle">
+				<i class="fa fa-times-circle"></i>
+			</a>
+			<li class="sidebar-brand">
+				<a href="#">FTT EC LP2 N1!!!</a>
+			</li>
+			<li>
+				<a href="tab01news.html" style="color: white;"><i class="fa fa-newspaper"></i> News</a>
+			</li>
+			<li>
+				<a href="tab02map.html" style="color: white;"><i class="fa fa-map"></i> Map</a>
+			</li>
+			<li>
+				<a href="tab03todo.html" style="color: white;"><i class="fa fa-list"></i> Todo</a>
+			</li>
+			<li>
+				<a href="tab04project.html" style="color: white;"><i class="fa fa-address-card"></i> Super-Trunfo</a>
+			</li>
+		</ul>
+	</div>
 	<main class="container text-center" id="aluno">
 		<div class="divLoading"></div>
 		<img src="img/LogoMarvel.png" style="width: 15%">
@@ -121,13 +56,12 @@
 			</div>
 		</div>
 		<div class="loading" style="display:none;">
-			<img src="./img/loadMarvel.gif" />
 		</div>
 		<div class="tabCards" style="display: none">
 			<div class="row">
 				<div class="col-md-5">
 					<div class="card">
-						<span id="nomePerc1" style="font-size: 29px"></span>
+						<span id="nomePerc1" style="font-size: 19px"></span>
 						<div class="text-center">
 							<img id="imgPerc1" src="" class="imgCard" />
 						</div>
@@ -203,7 +137,7 @@
 				</div>
 				<div class="col-md-5">
 					<div class="card">
-						<span id="nomePerc2" style="font-size: 29px"></span>
+						<span id="nomePerc2" style="font-size: 19px"></span>
 						<div class="text-center">
 							<img id="imgPerc2" src="" class="imgCard" />
 						</div>
@@ -263,37 +197,13 @@
 			</div>
 		</div>
 	</main>
-
-	<nav class="navbar fixed-bottom navbar-light bg-light width-button-bar">
-		<div class="row w-100 bottom-button-bar">
-			<div class="col-sm center-txt"><b onclick='window.location="tab01news.html"'>News<br><span
-						class="icon-font">&#x1f4f0;</span></b>
-			</div>
-			<div class="col-sm center-txt"><b onclick='window.location="tab02map.html"'>Map<br><span
-						class="icon-font">&#x1f4cc;</span></b>
-			</div>
-			<div class="col-sm center-txt"><b onclick='window.location="tab03todo.html"'>Todo<br><span
-						class="icon-font">&#x1F4DD;</span></b>
-			</div>
-			<div class="col-sm center-txt button-selected"><b onclick='window.location="tab04project.html"'>Super Trunfo<br><span
-						class="icon-font">&#x1F981;</span></b>
-			</div>
-		</div>
-	</nav>
-	<!-- carga de scripts do Bootstrap, JQuery, Popper -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-		integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-		crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-		integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
 	<script src="./js/bootbox.all.min.js"></script>
 	<script>
+		window.screen.orientation.lock('landscape');
 		var IDs = [];
 		var Play1 = [];
 		var Play2 = [];
@@ -442,6 +352,14 @@
 			$("#poder2").html(hero.powerstats.power == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.power);
 			$("#combat2").html(hero.powerstats.combat == "null" ? Math.floor(Math.random() * 100) : hero.powerstats.combat);
 		}
+		$("#menu-close").click(function (e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+		});
+		$("#menu-toggle").click(function (e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+		});
 	</script>
 </BODY>
 

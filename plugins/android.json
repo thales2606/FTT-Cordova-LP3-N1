@@ -7,12 +7,16 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-geolocation": {
-      "PACKAGE_NAME": "ftt.ec.news"
-    },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "ftt.ec.news"
+      "PACKAGE_NAME": "ftt.ec.STA"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "ftt.ec.STA"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "ftt.ec.STA"
+    }
+  }
 }
